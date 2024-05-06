@@ -64,7 +64,9 @@ def call(Map pipelineParams) {
             // Application Build happens here
             steps { // jenkins env variable no need of env 
                 script {
-                    buildApp().call()
+                    echo"executing Shared Library build"
+                    //buildApp().call()
+                    docker.appBuild()
                 }
 
                 //-DskipTests=true 

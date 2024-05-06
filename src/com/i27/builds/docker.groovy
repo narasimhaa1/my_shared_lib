@@ -9,7 +9,7 @@ class Docker{
     // Application build
     def appBuild() {
          jenkins.sh """
-         echo "Building the Ereka application"
+         echo "Building the Ereka application from Shared Library"
          echo "mvn clean package -DskipTests=true" 
          """
     }
